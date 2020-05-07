@@ -1,0 +1,227 @@
+
+html{background: url("https://res.cloudinary.com/chinaemeremonyenucheya/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1588842885/Eye_amiwwr.jpg") no-repeat center center fixed; 
+     -webkit-background-size: cover;
+     -moz-background-size: cover;
+     -o-background-size: cover;
+      background-size: cover;}
+
+ body {box-sizing: border-box;}
+
+
+.container-start{
+	margin: 100px;
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center; 
+	background-color: black;
+	width: 400px;
+	height: 200px;
+	border-radius: 25px;
+	opacity: 0.9;
+}
+
+.container-start h1{
+	color: #c41306;
+	font-family: sans-serif;
+	text-align: center;
+	padding: 5px;
+	text-shadow: 1px 1px #c41306;
+}
+
+.container-start p{
+	color: #fff;
+	font-family: sans-serif;
+	font-weight: bold;
+	text-align: center;
+	padding: 5px;
+}
+
+.container-start #start{
+	margin-left: auto;
+	margin-right: auto;
+	padding: 5px;
+	width: 100px;
+	height: 30px;
+	font-weight: bold;
+	background-color: #c41306;
+	border: none;
+	border-radius: 15px;
+	color: #fff;}
+
+#start:focus{outline: 0;}
+
+
+#start:hover{
+	cursor: pointer;
+	background-color: green;
+	color: #fff;}
+
+
+.holder{
+      margin: 50px auto; 
+	  width:350px;
+	  height: 450px;
+	  padding: 10px 50px 50px 50px;
+	  border: 1px solid black;
+	  border-radius: 20px;
+	  background-color: black;
+	  opacity: 0.9;}
+
+
+.holder h1{
+	font-family: sans-serif;
+    background-color: #f5f0f0;
+    text-align: center;
+    color: #f50505;
+    padding: 2px 0px;
+    border-radius: 25px;}
+
+.holder #questionAsked{
+	font-family: sans-serif;
+	font-size: 15px;
+	color: #fff;
+	font-weight: bold;}
+
+
+ input{padding: 0;margin: 0;}
+ 
+
+ #opt1,#opt2,#opt3,#opt4{padding: 5px;}
+
+
+.option{
+	background-color: #fff;
+	width: 300px;
+	display: inline-block;
+	color: #8f0404;
+	border: none;
+	border-radius: 20px;
+	margin-bottom: 10px;
+	padding: 10px 0 10px 15px;}
+
+
+.option:hover{
+	background-color: #616263;
+	color: #fff;
+	cursor: pointer;}
+
+
+
+#next{
+	margin-top: 10px;
+	width: 100px;
+	height: 30px;
+	background-color: #f50505;
+	border: 0 solid black;
+	border-radius: 15px;
+	color: #fff;}
+
+#next:focus{outline: 0;}
+
+
+#next:hover{
+	cursor: pointer;
+	background-color: green;
+	color: #fff;}
+
+#progress{
+	font-weight: bold;
+	font-family: sans-serif;
+	color: #fff;}
+
+#counter{
+	font-weight: bold; 
+	font-family: sans-serif; 
+	color: #fff;}
+
+
+#result{
+	text-align: center;
+	font-size: 25px;
+	color: #fff;
+	font-family: sans-serif;
+	font-weight: bold;}
+
+#answeredCorrectly{
+	text-align: center;
+	font-size: 25px; 
+	color: #fff;
+	font-family: sans-serif;
+	font-weight: bold;}
+
+
+.container-output{
+	margin-top: 100px; 
+	margin-right: auto;
+	margin-left: auto;
+	padding: 5px;
+	text-align: center;
+	background-color: black;
+	opacity: 0.9;
+	width: 400px;
+	height: 200px;
+	border-radius: 25px;}
+
+.container-output #restart{
+	margin-left: auto;
+	margin-right: auto;
+	padding: 5px;
+	width: 100px;
+	height: 30px;
+	font-weight: bold;
+	background-color: #c41306;
+	border: none;
+	border-radius: 15px;
+	color: #fff;}
+
+#restart:focus{outline: 0;}
+
+
+#restart:hover{
+	cursor: pointer;
+	background-color: green;
+	color: #fff;}
+
+
+.rightAnswer {background-color:green;
+	         color: white;
+	         width: 300px;
+	         display: inline-block;
+	         border: none;
+	         border-radius: 20px;
+	         margin-bottom: 10px;
+	        padding: 10px 0 10px 15px;
+
+	     }
+
+.wrongAnswer {background-color:red;
+	         color: white;
+	         width: 300px;
+	         display: inline-block;
+	         border: none;
+	         border-radius: 20px;
+	         margin-bottom: 10px;
+	        padding: 10px 0 10px 15px;
+
+	     }
+
+
+@media only screen and (max-width: 370px) {
+	.col-s-12{width: 200px;height: 100%;}
+	.container-start{width: 300px;height: 220px;}
+	.option {width: 90%;}
+	.container-output{width: 280px;}	
+}
+
+@media only screen and (min-width: 375px) {
+	.container-start{width: 340px;height: 200px;}
+	.col-s-12{width: 60%; height: 100%;}
+	.option {width: 90%;}
+}
+
+
+@media only screen and (min-width: 768px) {
+	.container-start{width: 400px;height: 200px;}
+	.col-s-12 {width:350px; height: 450px;}
+	.option {width: 300px;}
+}

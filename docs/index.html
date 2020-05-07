@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Quiz</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<main>
+		<div class="container-start">
+			<h1>Greek and Norsk myth Quiz</h1>
+			<p>3points per question answered correctly.</p>
+			<button id="start">Start Quiz</button>
+		</div>
+
+		<div class="holder col-s-12" style="display: none">
+			
+			<div id="quiz">
+				<h1>Quiz</h1>
+				
+				<hr style="margin-bottom: 20px">
+
+				<p id="questionAsked"></p>
+			</div>
+
+			<div class="buttonHolder">
+			     <label class="option" ><input onclick="indicator()" type="checkbox" name="option" value="1"><span id="opt1"></span></label>
+			     <label class="option" ><input onclick="indicator()" type="checkbox" name="option" value="2"><span id="opt2"></span></label>
+			     <label class="option" ><input onclick="indicator()" type="checkbox" name="option" value="3"><span id="opt3"></span></label>
+			     <label class="option" ><input onclick="indicator()" type="checkbox" name="option" value="4"><span id="opt4"></span></label>
+			</div>
+
+			<hr style="margin-top: 20px">
+
+			<button id="next"  onclick="loadNextQuestion()">Next</button>
+
+			<p id="progress">Question <span id="tracker">x</span> of 5</p>
+
+			<p id="counter">Answered correctly: <span id="scoreCounter">0</span>/5</p>
+		</div>
+
+		<div class="container-output" style ="display:none">
+			<p id="result"style="display: none"></p>
+			<p id="answeredCorrectly" style="display: none"></p>
+			<button id="restart">Restart Quiz</button>
+		</div>
+		
+	</main>
+
+	<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
