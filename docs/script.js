@@ -39,7 +39,7 @@ var questions = [{quiz:"Who is the most feared greek god?",
 
 
 // Defining of variables
-var currentQuestion= 0;
+var currentQuestion=0;
 var score = 0;
 var totalQuestions= questions.length;
 var scoreCont = 0;
@@ -58,6 +58,8 @@ var containerOutput = document.querySelector(".container-output");
 var start = document.querySelector("#start");
 var startCont = document.querySelector(".container-start");
 var restart= document.querySelector("#restart");
+var notSelect = document.querySelectorAll("input[type=checkbox]");
+
 
 
 // Event to start the quiz
@@ -90,9 +92,23 @@ function indicator(){
 	if(questions[currentQuestion].answer == answer){
 		selectedOption.parentElement.classList.add("rightAnswer");}
 
-	else{selectedOption.parentElement.classList.add("wrongAnswer");}
+	else{
+		selectedOption.parentElement.classList.add("wrongAnswer"); 
+	    for(var i=0; i < notSelect.length; i++){
+				var extract = notSelect[i].value;
+				if(extract == questions[currentQuestion].answer){
+				notSelect[i].parentElement.classList.add("rightAnswer");}
+			}
+		}
 }
 
+// Function to indicate the right answer when the wrong one is picked
+function correctIndicator (){
+	var notSelect = document.querySelectorAll("input[type=checkbox]");
+	for(var i=0; i < notSelect.length; i++){
+				var extract = notSelect[i].value;
+				notSelect[i].parentElement.classList.remove("rightAnswer");}			
+}
 
 // Function to load next question and output score and total questions answered.
 function loadNextQuestion(){
@@ -126,7 +142,10 @@ function loadNextQuestion(){
 		answeredCont.textContent = "You answered: " + scoreCont + " question(s) correctly.";
 		return;}
 
+	correctIndicator();
+
 	loadQuestion(currentQuestion);
+	
 
 };
 
@@ -134,45 +153,12 @@ function loadNextQuestion(){
 restart.addEventListener("click",function(){
 	containerOutput.style.display="none";
 	startCont.style.display="";
+	location.reload();
+return false;
+
 })
 
 
-// Quiz questions
-var questions = [{quiz:"Who is the most feared greek god?",
-				  option1: "Hephaestus",
-				  option2: "Zeus",
-				  option3: "Hades",
-				  option4: "Thor",
-				  answer : "2"},
-
-                {quiz:"Who is the god of war?",
-				  option1: "Hermes",
-				  option2: "Zeus",
-				  option3: "Hades",
-				  option4: "Ares",
-				  answer : "4"},
-
-				{quiz:"Which greek god lives in the underworld?",
-				  option1: "Ares",
-				  option2: "Cronos",
-				  option3: "Hades",
-				  option4: "Thor",
-				  answer : "3"},
-
-				{quiz:"What is the one-eyed and long-bearded Norsk god called?",
-				  option1: "Odin",
-				  option2: "Zeus",
-				  option3: "Thor",
-				  option4: "Apollos",
-				  answer : "1"},
-
-				{quiz:"A Norseman bows only to?",
-				  option1: "Poseidon",
-				  option2: "Hades",
-				  option3: "Odin",
-				  option4: "Thor",
-				  answer : "3"}, 
-				  ];
 
 
 
