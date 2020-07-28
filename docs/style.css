@@ -1,5 +1,5 @@
 
-html{background: url("https://res.cloudinary.com/chinaemeremonyenucheya/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1588842885/Eye_amiwwr.jpg") no-repeat center center fixed; 
+html{background: url("Eye.jpg") no-repeat center center fixed; 
      -webkit-background-size: cover;
      -moz-background-size: cover;
      -o-background-size: cover;
@@ -83,7 +83,7 @@ html{background: url("https://res.cloudinary.com/chinaemeremonyenucheya/image/up
 	font-weight: bold;}
 
 
- input{padding: 0;margin: 0;}
+ input{padding: 0;margin: 0; opacity: 0;}
  
 
  #opt1,#opt2,#opt3,#opt4{padding: 5px;}
@@ -101,9 +101,12 @@ html{background: url("https://res.cloudinary.com/chinaemeremonyenucheya/image/up
 
 
 .option:hover{
-	background-color: #616263;
-	color: #fff;
-	cursor: pointer;}
+	color: #8f0404;
+	border-radius: 1px;
+	cursor: pointer;
+	transition: all 100ms;
+	transform: scale(1.05);
+}
 
 
 
