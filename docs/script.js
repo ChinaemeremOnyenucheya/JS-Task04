@@ -114,10 +114,9 @@ function correctIndicator (){
 function loadNextQuestion(){
 	var selectedOption = document.querySelector('input[type=checkbox]:checked');
 	
-	if(!selectedOption){
-		alert("Please select your answer");
+	if(!selectedOption){nextButton.style.disabled = true;
 		return;}
-
+		
 	var answer = selectedOption.value;
 
 	if(questions[currentQuestion].answer == answer){
